@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+    <title>Quiz</title>
+    <style>
+        body{
+            font-family: 'Alata', sans-serif;
+            background-color: rgb(97, 95, 95);
+            margin:auto;
+            text-align: center;
+        }
+        .buttons {
+            display:flex;
+            width:100vw;
+            justify-content:space-between;
+        }
+        #sub{
+            background-color: green;
+        }
+        #prev, #nex{
+            background-color: skyblue;
+        }
+        #prev, #nex, #sub{
+            font-family: 'Alata', sans-serif;
+            width:150px;
+            height:75px;
+        }
+        .choice{
+            font-family: 'Alata', sans-serif;
+            width:300px;
+            height:150px;
+            align-items: baseline;
+        }
+        .choice:hover{
+            background-color: rgb(41, 180, 255);
+            cursor:pointer;
+        }
+        .choice:focus{
+            background-color: rgb(255, 162, 0);
+        }
+        #question{
+            text-align: center;
+        }
+        #prev:hover {
+            cursor:pointer;
+            background:rgb(26, 110, 136) !important;
+        }
+        #nex:hover {
+            cursor:pointer;
+            background:rgb(26, 110, 136) !important;
+        }
+        #sub:hover {
+            cursor:pointer;
+            background:rgb(26, 136, 46) !important;
+        }
+    </style>
+</head>
+<body onload="next()">
+    <div class="buttons">
+        <button onclick="previous()" id="prev">Previous</button>
+        <button onclick="next()" id="nex">Next</button>
+        <button onclick="displayScore()" id="sub">SUBMIT</button>
+    </div>
+    <div id="current"></div>
+    <hr>
+    <div id="question">Press Next to Start</div><br> 
+    <button class="choice" onclick="check(1)">A</button>
+    <button class="choice" onclick="check(2)">B</button>
+    <button class="choice" onclick="check(3)">C</button>
+    <button class="choice" onclick="check(4)">D</button><br><br>
+    <div id="feedback"></div>
+    <hr>
+    <div id="test"></div>
+    <div id="image"></div>
+</body>
+<script src="script.js"></script>
+</html>
